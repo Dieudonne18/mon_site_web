@@ -5,6 +5,7 @@ $serveur = "localhost";
 $dbname = "bdotablier2";
 $user = "root";
 $pass = "root";
+// test 
 
 //voir si les données passe dans le tableau
 // print_r($_POST);
