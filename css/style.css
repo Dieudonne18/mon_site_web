@@ -1,7 +1,6 @@
 body {
-    background-image: url(../images/12.jpg);
-    background-repeat: repeat;
-    backface-visibility: visible; 
+    background-image: url(../images/12.jp);
+    text-align: center;
 }
 
 *{
@@ -10,10 +9,31 @@ body {
     box-sizing: border-box;
 }
 
+.panel{
+text-align: center;
+color: black;
+font-size: 36px;
+}
+.image{
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+}
+.txt{
+color: grey;
+font-size: 26px;
+flex: 1;
+}
+
+.img{
+    flex:4 ;
+}
+
+
 h1{
-    font-size: 18px;
+    font-size: 26px;
     text-align: center;
-    color:rgb(196, 140, 140);
+    color:rgb(187, 36, 36);
 }
 .container
 {
@@ -45,66 +65,4 @@ legend{
 div> h2{
     color:red;
 
-}
-
-/* h1 {
-    font-weight: 500;
-    text-shadow: grey 1px 1px 2px;
-    font-size: 4.5rem;
-}
-
-h2 {
-    margin-top: 25px;
-    font-size: 3rem;
-    font-style: italic;
-} */
-
-/* main {
-    margin-top: 0;
-} */
-/* 
-.non-dispo {
-    color:#996aae; 
-    font-style: italic;
-    font-weight:bold;
-}
-
-.dispo {
-    color:#7cc2c4;
-    font-weight:bold;
-}
-
-a {
-    color: rgb(66, 66, 66);
-    font-weight: 700;
-} */
-
-/* .btn-base {
-    background-color: #7cc2c4;
-}
-
-.btn-base:hover {
-    background-color: #996aae;
-    font-weight: 800;
-}
-button a:hover {
-    text-decoration: none;
-    color: black;
-}
-
-.intitule {
-    font-weight: 800;
-    font-style: italic;
-} */
-
-/* .alert-dispo {
-    background-color: #e8d9f0;
-    border-color: #d8bbe6;
-    color: #996aae;
-}
-
-.alert-succes {
-background-color: #c6e4e6;
-border-color: #9dd9db;
-color: #579da0;
 }

@@ -1,52 +1,86 @@
-<?php
-if (!empty($_FILES))
-    $filename = $_FILES['photo']['name'];
+    <div class="col-md-7 col-md-offset-2">
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                Liste images enregistrement
+            </div>
+            <div class="panel-body">
+                <table class="table table-bodered">
+                    <tr>
+                        <th>id</th>
+                        <th>NomRecette</th>
+                        <th>biographie</th>
+                        <th>photo</th>
+                        <th>difficulte</th>
+                        <th>cout</th>
+                        <th>pays</th>
+                        <th>temps</th>
+                        <th>NBPesronne</th>
+                        <th>etape</th>
+                        <th>conseil</th>
+                        <th>Message</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <?php
+    /*Sélectionne toutes les valeurs dans la table users*/
+    $query = mysqli_query($connect, "SELECT * FROM bdotablier2");
 
-    if (!empty($_POST)) {
-   
-        if (!isset($_POST['NomRecette']) || strlen($_POST['NomRecette']) < 3 ||  strlen($_POST['NomRecette']) > 15) {
-            $contien .= "<div class=\" alert-dispo\">Le nom de la recette doit avoir entre 3 et 15 caractères !</div>";
-        }  // fin NomRecette
+    while ($row = mysqli_fetch_array($query, MYSQLI_ASSOC)) {
 
-        if (!isset($_POST['biographie']) || strlen($_POST['biographie']) < 255) {
-            $contien .= "<div class=\"alert alert-dispo\">Veuillez décrire la biographie</div>";
-        } // fin biographie
-        if (!isset($_POST['difficulte']) || strlen($_POST['difficulte']) < 3 ||  strlen($_POST['NomRecette']) > 15) {
-            $contien .= "<div class=\" alert-dispo\">Le nom de la recette doit avoir entre 3 et 15 caractères !</div>";
-        }  // fin difficulte
+        echo '<tr><td>' . $row["id"] . '</td>';
+        echo '<td>' . $row["NomRecette"] . '</td>';
+        echo '<td>' . $row["biographie"] . '</td>';
+        echo '<td><img src="images/' . $row["photo"] . ' " /></td>';
+        echo '<td>' . $row["difficulte"] . '</td>';
+        echo '<td>' . $row["cout"] . '</td>';
+        echo '<td>' . $row["pays"] . '</td>';
+        echo '<td>' . $row["temps"] . '</td>';
+        echo '<td>' . $row["NBPesronne"] . '</td>';
+        echo '<td>' . $row["etape"] . '</td>';
+        echo '<td>' . $row["conseil"] . '</td>';
+        echo '<td>' . $row["Message"] . '</td>';
 
-        if (!isset($_POST['cout']) || strlen($_POST['cout']) < 255) {
-            $contien .= "<div class=\"alert alert-dispo\">Veuillez décrire la biographie</div>";
-        } // fin cout
-        if (!isset($_POST['pays']) || strlen($_POST['pays']) < 3 ||  strlen($_POST['NomRecette']) > 15) {
-            $contien .= "<div class=\" alert-dispo\">Le nom de la recette doit avoir entre 3 et 15 caractères !</div>";
-        }  // fin pays
+        // echo '<td> <a href="" class="btn btn-danger">Suprimer</a></td>';
 
-        if (!isset($_POST['temps']) || strlen($_POST['temps']) < 255) {
-            $contien .= "<div class=\"alert alert-dispo\">Veuillez décrire la biographie</div>";
-        } // fin temps
-        if (!isset($_POST['NBPesonne']) || strlen($_POST['NBPesonne']) < 3 ||  strlen($_POST['NomRecette']) > 15) {
-            $contien .= "<div class=\" alert-dispo\">Le nom de la recette doit avoir entre 3 et 15 caractères !</div>";
-        }  // fin NBPesonne
+        '</tr>';
+    }
 
-        if (!isset($_POST['etape']) || strlen($_POST['etape']) < 255) {
-            $contien .= "<div class=\"alert alert-dispo\">Veuillez décrire la biographie</div>";
-        } // fin etape
-        if (!isset($_POST['conseil']) || strlen($_POST['conseil']) < 3 ||  strlen($_POST['NomRecette']) > 15) {
-            $contien .= "<div class=\" alert-dispo\">Le nom de la recette doit avoir entre 3 et 15 caractères !</div>";
-        }  // fin conseil
 
-        if (!isset($_POST['Message']) || strlen($_POST['Message']) < 255) {
-            $contien .= "<div class=\"alert alert-dispo\">Veuillez décrire la biographie</div>";
-        } // fin Message
+    // if(empty($contenu)){
+    //     $recettes = executeRequete(" SELECT * FROM recettes WHERE NomRecette = NomRecette ", array(':NomRecette' => $_POST['NomRecette']));
+    //     if($recettes->rowCount() > 0) 
+    //     { 
+    //         $contien .= '<div class= "alert alert-dispo text-center">fichier deja validé.choississez un autre</div>';
+    // }
+    // else{
+    //     $succes = executeRequete(
+    //         " INSERT INTO recettes(NomRecette, biographie, difficulte, cout, pays,temps, NBPesronne, etape, conseil, Message)
+    //         VALUES(:NomRecette, :biographie, :difficulte, :cout, :pays, :temps, :NBPesronne, :etape, :conseil, :Message)");
+    //         array(
+    // ':NomRecette' => $_POST['NomRecette'],
+    // ':biographie' => $_POST['biographie'],
+    // ':difficulte' => $_POST['difficulte'],
+    // ':cout' => $_POST['cout'],
+    // ':pays' => $_POST['pays'],
+    // ':temps' => $_POST['temps'],
+    // ':NBPesronne' =>$_POST['NBPesronne'],
+    // ':etape' => $_POST['etape'],
+    // ':conseil' => $_POST['conseil'],
+    // ':Message' => $_POST['Message'],
+    // );
 
-        if(empty($contenu)){
-            $recettes = executeRequete(" SELECT * FROM recette WHERE NomRecette = NomRecette ", array(':NomRecette' => $_POST['NomRecette']));
-            if($recettes->rowCount() > 0) 
-            { 
-                $contien .= '<div class= "alert alert-dispo text-center">fichier deja validé.choississez un autre</div>';
-        }
-        else{
-            $succes = executeRequete(
-
-            )
+    //     if ($succes){
+    //         $id_inserted = $bdotablier2 ->lastInsertId();
+    //         $listFiles = "";
+    //         foreach ($_FILES['photo']['name'] as $file)
+    //         $listFiles .= $file . ", ";
+    //         $listFiles .= $file . ", ";
+    //         $contien .= "<div class='alert-succes text-center'>Votre fichier a bien été enregistrée avec le numéro <b>$id_inserted</b>, 
+    //                 et les photos <b>$listFiles</b>   
+    //                 <br><a href='#?id=$id_inserted'>cliquez ici pour voir votre image.</a></div>";
+    //     } else {
+    //         $contenu .= "<div class='alert-dispo'>Erreur lors de l\'enregistrement !</div>";
+    //     }
+    ?>
