@@ -1,8 +1,7 @@
 
 <?php
-require("header.html"); ?>
-<?php
 // print_r($_POST);
+
 //Etape Nom
 if (isset($_POST['NomRecette'])) //On regarde si les variables existent, sinon la condition ne sera pas validée
 {
@@ -13,13 +12,12 @@ if (isset($_POST['biographie'])) {
     echo htmlentities($_POST['biographie']) . '<br>';
 }
 //etape photo
-
 if (isset($_POST['photo'])) {
     echo htmlentities($_POST['photo']) . '<br>';
 }
 // Etape difficulte
 if (isset($_POST['difficulte'])) {
-    echo htmlentities($_POST['difficulte'])  . '<br>';
+    echo htmlentities($_POST['difficulte']) . '<br>';
 }
 // Etape cout
 if (isset($_POST['cout'])) {

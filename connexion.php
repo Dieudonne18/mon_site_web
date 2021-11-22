@@ -14,10 +14,12 @@
 </head>
 <h1> connexion à la bases de données MySQL</h1>
 <?php
+
+
 $servername = 'localhost';
 $username = 'root';
 $password = 'root';
-$dbname = 'bdOtablier2';
+$dbname = 'bdotablier2';
 
 //On essaie de se connecter
 try {
@@ -28,7 +30,7 @@ try {
 }
 
 /*On capture les exceptions si une exception est lancée et on affiche
-             *les informations relatives à celle-ci*/ catch (PDOException $e) {
+*les informations relatives à celle-ci*/ catch (PDOException $e) {
     echo "Erreur : " . $e->getMessage();
 }
 ?>

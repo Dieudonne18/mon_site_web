@@ -58,10 +58,11 @@ form{
 }
 
 legend{
-    color:black;
+    color:red;
     font-size: 20px;
 }
 
 div> h2{
-    color:red;
+    color:black;
+   
 }
