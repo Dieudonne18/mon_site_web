@@ -33,7 +33,7 @@ flex: 1;
 h1{
     font-size: 26px;
     text-align: center;
-    color:rgb(187, 36, 36);
+    color:rgb(172, 87, 87);
 }
 .container
 {
@@ -49,11 +49,11 @@ p{
 }
 form{
    padding: 15px;
-width: 900px;
+    width: 900px;
     margin: auto;
     border: 1px solid black;
     border-radius: 5px;
-    background-color: burlywood;
+    background-color: rgb(221, 215, 208);
 
 }
 
@@ -64,5 +64,4 @@ legend{
 
 div> h2{
     color:red;
-
 }

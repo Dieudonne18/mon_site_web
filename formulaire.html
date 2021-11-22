@@ -11,42 +11,44 @@
     <link rel="shortcut icon" href="../images/12.jpg" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <!-- & -->
     <title>projet o'tablier</title>
 </head>
 
-<!-- https://www.vulgarisation-informatique.com/formulaires-php.php -->
-
 <body>
     <!--  *****************ENTETE************** -->
-
     <header>
         <h1>Déposez votre recette de cuisine</h1>
     </header>
     <!-- ************CONTAINER***********                   -->
     <div class="container">
-        <form action="formulaire.php" method="POST" name="formulaire" enctype="multipart/form-data">
+        <form action="formulaire2.php" method="POST" name="formulaire" enctype="multipart/form-data">
+
+            <!-- etape nom de la recette -->
             <legend>Titre de la recette *:</legend>
             <div class=" mb-3">
                 <label for="Nom"><span class="obligatoire"></span>&nbsp;&nbsp;&nbsp</label>
                 <!-- minlength="2"maxlength="25" -->
                 <input type="text" id="name" name="NomRecette" required>
             </div>
+
             <!-- **************required=champs obligatoir************ -->
+            <!-- etape nom de la biographie -->
             <legend>biographie * :</legend>
             <div class="mb-3">
                 <textarea name="biographie" id="text" cols="30" placeholder="bio" rows="10" required></textarea>
             </div>
+
+            <!-- etape insertion image -->
             <div class="mb-3">
                 <div class="panel-heading">
                     <h2>
                         Formulaire ajout une image</h2>
-                    <label for="photo">Ajouter une photo: </label>
-                    <input type="file" accept="image/png, image/jpeg" name="photo[]" id="photo" multiple>
+                    <label for="Photo">Ajouter une photo: </label>
+                    <input type="file" name="photo" id="fichier" value="photo">
                 </div>
             </div>
-            <!-- ********************ETAPE INFO********************* -->
 
+            <!-- ********************ETAPE INFO********************* -->
             <legend>INFOS CLÉS</legend>
             <div class="mb-3">
                 <select class="form-select" name="difficulte" aria-label="Default select example" required>
@@ -80,6 +82,7 @@
                     <option value="oceanie">oceanie"</option>
                 </select>
             </div>
+            <!-- ********************ETAPE PREPARATION********************* -->
             <div class="mb-3">
                 <option selected>temps de preparation.</option>
                 <label for="temps">temps:</label>
@@ -102,20 +105,22 @@
                 <label for="temps">minuite:</label>
                 <input type="number" id="Minuite" name="temps" min="0" max="60">
             </div>
+
             <!-- **************ETAPE INGREDIENTS************** -->
             <div class="mb-3">
                 <legend>INGRÉDIENTS</legend>
                 <h2>Nombre de personnes ou portions *</h2>
-                <select class="form-select" name="NBPesronne" aria-label="Default select example">
-                    <option selected>Pesronne</option>
+                <select class="form-select" name="NBPersonne" aria-label="Default select example">
+                    <option selected>Personne</option>
                     <option value="Piece">Piece</option>
                     <option value="Portion">Portion</option>
                     <option value="Biscuit">Biscuit</option>
-                    <input type="number" id="temps" name="NBPesronne" min="0" max="1000">
+                    <input type="number" id="temps" name="NBPersonne" min="0" max="1000">
                 </select>
                 <!-- <label for="temps">minuite:</label> -->
             </div>
-            <!-- ****************ETAPE PRÉPARATION***************** -->
+
+            <!-- ****************ETAPE CUISSON***************** -->
             <div class="mb-3">
                 <legend>PRÉPARATION</legend>
                 <p>Si votre recette nécessite une cuisson au four,
@@ -161,6 +166,7 @@
                             rows="3"></textarea>
                     </p>
                 </div>
+
                 <!-- **********************ETAPE CONSEILS ET MESSAGE**************** -->
                 <div class="mb-3">
                     <h2>Conseils</h2>
@@ -171,13 +177,8 @@
                     <textarea name="Message" id="" cols="30" rows="10"></textarea>
                 </div>
             </div>
-            <div class="mb-3">
-                <label for="photo">Ajouter une photo: </label>
-                <input type="file" accept="image/png, image/jpeg" name="photo[]" id="photo" multiple>
-            </div>
-            <!-- </div> -->
             <div class="col-12">
-                <button class="btn btn-primary" type="submit">Déposer une recette</button>
+                <button class="btn btn-primary" type="submit" name="submit">Déposer une recette</button>
             </div>
         </form>
     </div>

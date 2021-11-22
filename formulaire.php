@@ -12,6 +12,11 @@ if (isset($_POST['NomRecette'])) //On regarde si les variables existent, sinon l
 if (isset($_POST['biographie'])) {
     echo htmlentities($_POST['biographie']) . '<br>';
 }
+//etape photo
+
+if (isset($_POST['photo'])) {
+    echo htmlentities($_POST['photo']) . '<br>';
+}
 // Etape difficulte
 if (isset($_POST['difficulte'])) {
     echo htmlentities($_POST['difficulte'])  . '<br>';
@@ -30,8 +35,8 @@ if (isset($_POST['temps'])) {
     echo htmlentities($_POST['temps']) . '<br>';
 }
 // Etape NBPesronne
-if (isset($_POST['NBPesronne'])) {
-    echo htmlentities($_POST['NBPesronne']) . '<br>';
+if (isset($_POST['NBPeronne'])) {
+    echo htmlentities($_POST['NBPersonne']) . '<br>';
 }
 // Etape etape curson
 if (isset($_POST['etape1'])) {
