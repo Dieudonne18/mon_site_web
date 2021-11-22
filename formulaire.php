@@ -34,6 +34,26 @@ if (isset($_POST['pays'])) {
 if (isset($_POST['temps'])) {
     echo htmlentities($_POST['temps']) . '<br>';
 }
+// Etape temps
+if (isset($_POST['temps1'])) {
+    echo htmlentities($_POST['temps1']) . '<br>';
+}
+// Etape temps
+if (isset($_POST['temps2'])) {
+    echo htmlentities($_POST['temps2']) . '<br>';
+}
+// Etape temps
+if (isset($_POST['temps3'])) {
+    echo htmlentities($_POST['temps3']) . '<br>';
+}
+// Etape temps
+if (isset($_POST['temps4'])) {
+    echo htmlentities($_POST['temps4']) . '<br>';
+}
+// Etape temps
+if (isset($_POST['temps5'])) {
+    echo htmlentities($_POST['temps5']) . '<br>';
+}
 // Etape NBPesronne
 if (isset($_POST['NBPeronne'])) {
     echo htmlentities($_POST['NBPersonne']) . '<br>';
@@ -71,8 +91,8 @@ if (isset($_POST['etape8'])) {
 if (isset($_POST['conseil'])) {
     echo htmlentities($_POST['conseil']) . '<br>';
 }
-// Etape Message
-if (isset($_POST['Message'])) {
-    echo htmlentities($_POST['Message']);
+// Etape comment
+if (isset($_POST['message'])) {
+    echo htmlentities($_POST['message']);
 }
 ?>
