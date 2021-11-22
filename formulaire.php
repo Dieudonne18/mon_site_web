@@ -2,7 +2,7 @@
 <?php
 require("header.html"); ?>
 <?php
-
+// print_r($_POST);
 //Etape Nom
 if (isset($_POST['NomRecette'])) //On regarde si les variables existent, sinon la condition ne sera pas validée
 {
@@ -33,9 +33,34 @@ if (isset($_POST['temps'])) {
 if (isset($_POST['NBPesronne'])) {
     echo htmlentities($_POST['NBPesronne']) . '<br>';
 }
-// Etape etape
-if (isset($_POST['etape'])) {
-    echo htmlentities($_POST['etape']) . '<br>';
+// Etape etape curson
+if (isset($_POST['etape1'])) {
+    echo htmlentities($_POST['etape1']) . '<br>';
+}
+if (isset($_POST['etape2'])) {
+    echo htmlentities($_POST['etape2']) . '<br>';
+}
+
+if (isset($_POST['etape3'])) {
+    echo htmlentities($_POST['etape3']) . '<br>';
+}
+
+if (isset($_POST['etape4'])) {
+    echo htmlentities($_POST['etape4']) . '<br>';
+}
+
+if (isset($_POST['etape5'])) {
+    echo htmlentities($_POST['etape5']) . '<br>';
+}
+if (isset($_POST['etape6'])) {
+    echo htmlentities($_POST['etape6']) . '<br>';
+}
+
+if (isset($_POST['etape7'])) {
+    echo htmlentities($_POST['etape7']) . '<br>';
+}
+if (isset($_POST['etape8'])) {
+    echo htmlentities($_POST['etape8']) . '<br>';
 }
 // Etape conseil
 if (isset($_POST['conseil'])) {
