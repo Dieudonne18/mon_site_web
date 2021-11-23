@@ -12,8 +12,8 @@ if (isset($_POST['biographie'])) {
     echo htmlentities($_POST['biographie']) . '<br>';
 }
 //etape photo
-if (isset($_POST['photo'])) {
-    echo htmlentities($_POST['photo']) . '<br>';
+if (isset($_FILES['photo'])) {
+    echo htmlentities($_FILES['photo']) . '<br>';
 }
 // Etape difficulte
 if (isset($_POST['difficulte'])) {

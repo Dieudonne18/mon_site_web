@@ -6,11 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="paho pankoue">
-    <link rel="stylesheet" href="./css/style.css">
+    <title>projet o'tablier</title>
+    <link rel="stylesheet" href="../formulaireOtablier2/css/style.css">
     <link rel="icon" href="./images/19.jpg" width:32px,height:32px>
     <link rel="shortcut icon" href="../images/12.jpg" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <title>projet o'tablier</title>
+    <script>
+
+    </script>
 </head>
 
 <body>
@@ -22,7 +25,7 @@
     <div class="container">
         <form action="formulaire2.php" method="POST" name="formulaire" enctype="multipart/form-data">
             <!-- etape nom de la recette -->
-            <legend>Titre de la recette *:</legend>
+            <legend>TITRE DE LA RECETTE *:</legend>
             <div class=" mb-3">
                 <label for="Nom"><span class="obligatoire"></span>&nbsp;&nbsp;&nbsp</label>
                 <!-- minlength="2"maxlength="25" -->
@@ -31,13 +34,13 @@
 
             <!-- **************required=champs obligatoir************ -->
             <!-- etape nom de la biographie -->
-            <legend>Biographie :</legend>
+            <legend>BIOGRAPHIE :</legend>
             <div class="mb-3">
                 <textarea id="text" name="biographie" cols="30" placeholder="bio" rows="10" required></textarea>
             </div>
 
             <!-- etape insertion image -->
-            <legend>Images :</legend>
+            <legend>IMAGE:</legend>
             <div class="mb-3">
                 <div class="panel-heading">
                     <h2>Formulaire ajout une image</h2>
@@ -49,8 +52,8 @@
             <!-- ********************ETAPE INFO********************* -->
             <legend>INFOS CLÉS</legend>
             <div class="mb-3">
-                <select class="form-select" name="difficulte" aria-label="Default select example" required>
-                    <label for="title">Difficulté</label>
+                <label>Difficulté</label>
+                <select class="form-select" name="difficulte" required>
                     <!-- <option selected>Difficulté</option> -->
                     <option value="Tres facile">Tres facile</option>
                     <option value="Facile">Facile</option>
@@ -60,16 +63,18 @@
                 </select>
             </div>
             <div class="mb-3">
-                <select class="form-select" name="cout" aria-label="Default select example">
-                    <option selected>coût</option>
+                <label>Cout</label>
+                <select class="form-select" name="cout">
+                    <!-- <option selected>coût</option> -->
                     <option value="bon-marche">Bon marché</option>
                     <option value="Budget-moyen">Budget moyen</option>
                     <option value="Assez-cher">Assez cher</option>
                 </select>
             </div>
             <div class="mb-3">
-                <select class="form-select" name="pays" aria-label="Default select example">
-                    <label for="title">Pays d'origine</label>
+                <label>pays d'origine</label>
+                <select class="form-select" name="pays" required>
+                    <!-- <label for="title">Pays d'origine</label> -->
                     <!-- <option selected>pays</option> -->
                     <option value="Europe">Europe</option>
                     <option value="Afrique">Afrique</option>
@@ -79,7 +84,7 @@
                 </select>
             </div>
             <!-- ********************ETAPE PREPARATION********************* -->
-            <legend>Préparation</legend>
+            <legend>TEMPS DE PREPARATION</legend>
             <div class="mb-3">
                 <option selected>temps de preparation.</option>
                 <label for="temps">Heure:</label>
@@ -88,7 +93,7 @@
                 <input type="number" id="Minuite" name="temps1" min="0" max="60">
             </div>
             <div class="mb-3">
-                <option selected>Temps de curson</option>
+                <option selected>Temps de cuisson</option>
                 <label for="temps">Heure:</label>
                 <input type="number" id="temps" name="temps2" min="0" max="24">
                 <label for="temps">minuite:</label>
@@ -104,7 +109,7 @@
             </div>
 
             <!-- **************ETAPE INGREDIENTS************** -->
-            <legend>Personne</legend>
+            <legend>PERSONNE</legend>
             <div class="mb-3">
                 <h2>Nombre de personnes ou portions *</h2>
                 <select class="form-select" aria-label="Default select example" name="NBPersonne">
@@ -157,22 +162,23 @@
             </div>
 
             <!-- **********************ETAPE CONSEILS ET MESSAGE**************** -->
-            <legend>Conseils</legend>
+            <legend>CONSEIL</legend>
             <div class="mb-3">
-                <h2>Conseils</h2>
+                <!-- <h2>Conseils</h2> -->
                 <textarea name="conseil" id="" cols="30" rows="10"></textarea>
             </div>
-            <legend>Conseil</legend>
+            <legend>MESSAGE</legend>
             <div class="mb-3">
-                <h2>Message pour le modérateur</h2>
+                <!-- <h2>Message pour le modérateur</h2> -->
                 <textarea name="message" id="" cols="30" rows="10"></textarea>
             </div>
-    </div>
-    <div class="col-12">
-        <button class="btn btn-primary" type="submit" name="submit">Déposer une recette</button>
+            <div class="col-12">
+                <button class="btn btn-primary" type="submit" name="submit">Déposer une recette</button>
+            </div>
     </div>
     </form>
     </div>
+
 </body>
 
 </html>

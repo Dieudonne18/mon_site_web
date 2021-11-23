@@ -23,7 +23,9 @@ try {
 
     $NomRecette = $_POST["NomRecette"];
     $biographie = $_POST["biographie"];
-    $photo = $_POST["photo"];
+    // $photo = $_POST["photo"];
+    $photo = $_FILES['photo']['name'];
+
     $difficulte = $_POST["difficulte"];
     $cout = $_POST["cout"];
     $pays = $_POST["pays"];
