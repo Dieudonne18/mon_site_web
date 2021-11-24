@@ -40,7 +40,7 @@
 <!-- ************CONTAINER***********                   -->
 <div class="container">
 
-    <form action="formulaire2.php" method="POST" id="formulaire" name="formulaire" novalidate enctype="multipart/form-data">
+    <form action="formulaire.php" method="POST" id="formulaire" name="formulaire" novalidate enctype="multipart/form-data">
         <!-- etape nom de la recette -->
         <legend>TITRE DE LA RECETTE *:</legend>
         <div class=" mb-3">
@@ -56,12 +56,15 @@
             <textarea id="text" name="biographie" cols="30" placeholder="bio" rows="10" required></textarea>
         </div>
 
-        <!-- etape insertion image -->
+        <!--******************** etape Téléhargement image  *******************-->
+
+
         <legend>IMAGE:</legend>
         <div class="mb-3">
-            <div class="panel-heading">
+            <div class="image_recette">
                 <h2>Formulaire ajout une image</h2>
                 <label for="Photo">Ajouter une photo: </label>
+                <br><br>
                 <input type="file" name="photo" id="fichier" value="photo">
             </div>
         </div>
@@ -130,6 +133,7 @@
         <div class="mb-3">
             <h2>Nombre de personnes ou portions *</h2>
             <select class="form-select" aria-label="Default select example" name="NBPersonne">
+                <option></option>
                 <option selected>Personne</option>
                 <option value="Piece">Piece</option>
                 <option value="Portion">Portion</option>
@@ -198,7 +202,7 @@
                 <textarea name="message" id="" cols="30" rows="10"></textarea>
             </div>
             <div class="col-12">
-                <button class="btn btn-primary" type="submit" value="deposer" name="submit">Déposer une recette</button>
+                <button class="btn btn-primary" type="submit" value="ajouter" name="submit">Déposer une recette</button>
             </div>
             <!-- </div> -->
 
