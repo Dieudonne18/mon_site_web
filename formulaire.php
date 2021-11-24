@@ -93,4 +93,28 @@ if (isset($_POST['conseil'])) {
 if (isset($_POST['message'])) {
     echo htmlentities($_POST['message']);
 }
+// fin isset
+
+
+//
+// Il ya des photos à télécharger vers le serveur
+//
+if (isset($_FILES) && isset($id_inserted)) {
+    /* Enregistrer le fichier téléchargé dans le système de fichiers local */
+    // On renomme le fichier téléchargé sous la forme "IDxxx-nom_du_fichier" où xxx = n° de l'annonce ($id_inserted)
+    // jeprint_r($_FILES) ;
+    $list = $_FILES['photo'];
+    $nbFiles = count($list['name']);
+    for ($i = 0; $i < $nbFiles; $i++) {
+        $filename = "Id" . sprintf("%03d", $id_inserted) . "-" . basename($list['name'][$i]);
+        if (move_uploaded_file($list['tmp_name'][$i], './upload/' . $filename)) {
+            echo "<strong  style='color: green;'> Succès du Téléchargement, renommé en $filename </strong>";
+        } else {
+            echo "<strong  style='color: red;'> Échec </strong>";
+        }
+        echo "<br>";
+    }
+}
+
+
 ?>
