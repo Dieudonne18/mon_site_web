@@ -16,20 +16,20 @@
 
 </head>
 <!-- 
-<body>
-    <STYle>
-        #d1 {
-            background-color: #EECC4499;
-        }
+        <body>
+            <STYle>
+                #d1 {
+                    background-color: #EECC4499;
+                }
 
-        #d2 {
-            background-color: #44EEAA99;
-        }
+                d2 {
+                    background-color: #44EEAA99;
+                }
 
-        button {
-            background-color: grey;
-        }
-    </STYle> -->
+                button {
+                    background-color: grey;
+             }
+            </STYle> -->
 
 
 <!--  *****************ENTETE************** -->
