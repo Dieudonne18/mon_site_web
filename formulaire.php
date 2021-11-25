@@ -14,7 +14,7 @@
 <body>
     <style>
         .myImage img {
-            width: 400px;
+            width: 800px;
             flex: 4;
             margin: 35px;
 
@@ -27,6 +27,7 @@
         <img src="<?php
                     echo $photo; ?>">
     </div> -->
+
     <?php
     // print_r($_POST);
 
@@ -126,7 +127,6 @@
 
     //
     // Il ya des photos à télécharger vers le serveur
-    //
 
     if (isset($_POST['submit'])) {
         // 1-nom de l'image
@@ -137,7 +137,7 @@
         $tmp_photo = $_FILES['photo']['tmp_name'];
         $temporaire = $_FILES['photo']['tmp_name'];
 
-        $extens = strrchr($name_photo, '.');
+        // $extens = strrchr($name_photo, '.');
 
         //var_dump pour voir si la photo passe
         // var_dump($name_photo);

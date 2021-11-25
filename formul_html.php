@@ -11,7 +11,6 @@
     <link rel="icon" href="./images/19.jpg" width:32px,height:32px>
     <link rel="shortcut icon" href="../images/12.jpg" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <script src="./form.js" async></script>
 
 
 </head>
@@ -37,7 +36,7 @@
     <h1>Déposez votre recette de cuisine</h1>
 </header>
 
-<!-- ************CONTAINER***********                   -->
+<!-- ************CONTAINER********** -->
 <div class="container">
 
     <form action="formulaire.php" method="POST" id="formulaire" name="formulaire" novalidate enctype="multipart/form-data">
@@ -65,7 +64,7 @@
                 <h2>Formulaire ajout une image</h2>
                 <label for="Photo">Ajouter une photo: </label>
                 <br><br>
-                <input type="file" name="photo" id="fichier" value="photo">
+                <input type="file" name="photo" id="fichier" multiple value="photo">
             </div>
         </div>
 
@@ -189,6 +188,7 @@
                 </p>
             </div>
             </section>
+
             <!-- **********************ETAPE CONSEILS ET MESSAGE**************** -->
 
             <legend>CONSEIL</legend>
@@ -202,13 +202,14 @@
                 <textarea name="message" id="" cols="30" rows="10"></textarea>
             </div>
             <div class="col-12">
-                <button class="btn btn-primary" type="submit" value="ajouter" name="submit">Déposer une recette</button>
+                <button class="btn btn-primary" id="btn" type="submit" value="ajouter" name="submit">Déposer une recette</button>
             </div>
             <!-- </div> -->
 
         </div>
 </div>
 </form>
+<script src="./form.js" async></script>
 
 </body>
 
