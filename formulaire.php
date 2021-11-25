@@ -14,10 +14,10 @@
 <body>
     <style>
         .myImage img {
-            width: 800px;
+            width: 400px;
+            height: 400px;
             flex: 4;
-            margin: 35px;
-
+            margin: 20px;
         }
     </style>
     <div class="myImage">
