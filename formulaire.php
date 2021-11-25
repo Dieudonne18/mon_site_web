@@ -21,7 +21,7 @@
         }
     </style>
     <div class="myImage">
-        <img src="ImagesRecette/5.jpg">
+        <img src="<?php echo "ImagesRecette/" . $_FILES['photo']['name'] ?>">
     </div>
     <!-- <div class="myImage">
         <img src="<?php
@@ -40,9 +40,9 @@
         echo htmlentities($_POST['biographie']) . '<br>';
     }
     //etape photo
-    if (isset($_FILES['photo'])) {
-        echo htmlentities($_FILES['photo']) . '<br>';
-    }
+    // if (isset($_FILES['photo'])) {
+    //     echo htmlentities($_FILES['photo']['name']) . '<br>';
+    // }
     // Etape difficulte
     if (isset($_POST['difficulte'])) {
         echo htmlentities($_POST['difficulte']) . '<br>';
