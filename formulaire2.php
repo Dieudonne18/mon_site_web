@@ -16,10 +16,20 @@ $password = "root";
 
 
 
+
 try {
     //On se connecte à la BDD
     $connect = new PDO("mysql:host=$servname;dbname=$dbname", 'root', 'root');
     $connect->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+    //On insère les données reçues si les champs sont remplis
+
+    $sql = $connect->prepare(" INSERT INTO 
+        recettes(NomRecette, biographie, photo, difficulte, cout, pays, temps, temps1, temps2, temps3, temps4, temps5, NBPersonne, etape1, etape2, etape3, etape4, etape5, etape6, etape7, etape8, conseil, message)
+        VALUES(:NomRecette, :biographie, :photo, :difficulte, :cout, :pays, :temps, :temps1, :temps2, :temps3, :temps4, :temps5, :NBPersonne, :etape1, :etape2, :etape3, :etape4, :etape5, :etape6, :etape7, :etape8, :conseil, :message)");
+
+
+    //declaration variable
 
     $NomRecette = $_POST["NomRecette"];
     $biographie = $_POST["biographie"];
@@ -46,13 +56,6 @@ try {
     $etape8 = $_POST["etape8"];
     $conseil = $_POST["conseil"];
     $message = $_POST["message"];
-
-
-    $sql = $connect->prepare(" INSERT INTO 
-        recettes(NomRecette, biographie, photo, difficulte, cout, pays, temps, temps1, temps2, temps3, temps4, temps5, NBPersonne, etape1, etape2, etape3, etape4, etape5, etape6, etape7, etape8, conseil, message)
-        VALUES(:NomRecette, :biographie, :photo, :difficulte, :cout, :pays, :temps, :temps1, :temps2, :temps3, :temps4, :temps5, :NBPersonne, :etape1, :etape2, :etape3, :etape4, :etape5, :etape6, :etape7, :etape8, :conseil, :message)");
-
-
 
     //On insère les données ds la bd
 

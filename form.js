@@ -1,39 +1,39 @@
 
-// alert('bonjour Christelle');
-let listInputs = document.querySelectorAll('input');
-let btn = document.getElementById('btn');
-// let year = document.getElementById('form_year');
 
-btn.addEventListener('click', Valid);
+let myform = document.getElementById('myform');
+myform.addEventListener('submit', function (e) {
+    let myInput = document.getElementById('users');
+    // "regex"expression reguliere pour forcé le formulaire à accepter juste......./   / 
+    let myRegex = /[a-zA-z-\s+$]/;
+    // trim()"retire les espace vide "
+    if (myInput.value.trim() == "") {
+        myError = document.getElementById('error');
+        myError.innerHTML = "Le champs nom est requis";
+        myError.style.color = 'red';
+        e.preventDefault();
 
-
-
-function Valid() {
-    // e.preventDefault();
-    // alert('bonjour Christelle');
-
-    for (input of listInputs) {
-        let p = document.createElement('p');
-        p.style.color = 'red'
-        p.style.fontWeight = 'bold'
-        input.parentElement.append(p)
-
-        // input = false;
-        // inputElement.parentNode.lastElementChild.innerText = "";
-
-        if ((input.value) == "") {
-            p.innerHTML = 'Veuillez remplire le champs vide';
-
-        }
-        // console.log(year.value.length);
-
-        // if (year.value.length != 4) {
-        //     year.parentNode.lastChild.innerHTML = 'Veuillez mettre au minimum et au maximum 4 chiffres';
-        // }
     }
+    if (myInput.value.trim() == "") {
+        myError = document.getElementById('error1');
+        myError.innerHTML = "Le champs biograpgie est requis";
+        myError.style.color = 'yellow';
+        e.preventDefault();
 
-}
+    }
+    if (myInput.value.trim() == "") {
+        myError = document.getElementById('error2');
+        myError.innerHTML = "Le champs pays d'origine est requis";
+        myError.style.color = 'green';
+        e.preventDefault();
 
+    } else if (myRegex.test(myInput.value) == false) {
+        myError = document.getElementById('error');
+        myError.innerHTML = "Le nom ne doit contenir que des lettre des tirets uniquement";
+        myError.style.color = 'yellow';
+        e.preventDefault();
+
+    }
+});
 
 
 
