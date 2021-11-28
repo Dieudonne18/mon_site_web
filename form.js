@@ -25,6 +25,13 @@ myform.addEventListener('submit', function (e) {
         myError.innerHTML = "Le champs pays d'origine est requis";
         myError.style.color = 'green';
         e.preventDefault();
+    }
+    if (myInput.value.trim() == "") {
+        myError = document.getElementById('error3');
+        myError.innerHTML = "Le champs biograpgie est requis";
+        myError.style.color = 'red';
+        e.preventDefault();
+
 
     } else if (myRegex.test(myInput.value) == false) {
         myError = document.getElementById('error');
@@ -33,6 +40,7 @@ myform.addEventListener('submit', function (e) {
         e.preventDefault();
 
     }
+
 });
 
 

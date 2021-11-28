@@ -15,16 +15,15 @@
 </head>
 
 <body>
+
     <!--  *****************ENTETE************** -->
     <header>
-
-        <h1 class="animated-text" speed="100" speed="50" delay="3200">Déposez votre recette de cuisine</h1>
+        <h1 class="animated-text">Déposez votre recette de cuisine</h1>
     </header>
     <section>
         <!-- ************CONTAINER********** -->
         <div class="container">
-
-            <form action="formulaire.php" method="POST" id="myform" name="formulaire" novalidate enctype="multipart/form-data">
+            <form action="formulaire.php" method="POST" class="formul" id="myform" name="formulaire" novalidate enctype="multipart/form-data">
                 <!-- etape nom de la recette -->
                 <article>
                     <legend>TITRE DE LA RECETTE *:</legend>
@@ -35,7 +34,6 @@
                     </div>
                     <span id="error"></span>
                 </article>
-
                 <hr>
                 <article>
                     <!-- **************required=champs obligatoir************ -->
@@ -58,6 +56,7 @@
                             <input type="file" name="photo" id="fichier" multiple value="photo">
                         </div>
                     </div>
+                    <span id="error2"></span>
                     <br>
                 </article>
                 <hr>
@@ -77,7 +76,6 @@
                     </div>
                 </article>
                 <hr>
-
                 <div class="mb-3">
                     <div class="cou" style="text-align:left">Cout</div>
                     <!-- <select class="form-select" name="cout"> -->
@@ -100,8 +98,8 @@
                         <option value="oceanie">oceanie</option>
                     </select>
                 </div>
-                <span id="error2"></span>
-
+                <span id="error3"></span>
+                <br>
                 <hr>
                 <article>
                     <!-- ********************ETAPE PREPARATION********************* -->
@@ -111,8 +109,6 @@
                         <br>
                         <label for="temps">Heure : </label>
                         <input type="time" id="temps" name="temps" min="0" max="24">
-                        <!-- <label for="temps">minuite:</label>
-                <input type="number" id="Minuite" name="temps1" min="0" max="60"> -->
                     </div>
                 </article>
                 <hr>
@@ -120,7 +116,6 @@
                     <div class="mb-3">
                         <option selected>Temps de cuisson</option>
                         <br>
-
                         <label for="temps">Heure : </label>
                         <input type="time" id="temps" name="temps2" min="0" max="24">
                     </div>
@@ -134,7 +129,6 @@
 
                         <label for="temps">Heure : </label>
                         <input type="time" id="temps" name="temps4" min="0" max="24">
-
                     </div>
                 </article>
                 <hr>
@@ -163,9 +157,7 @@
                 <article>
                     <div class="mb-3">
                         <div class=etapes>
-
                             <!-- ****************ETAPE CUISSON***************** -->
-
                             <legend>Étapes Prèparation</legend>
                             <h2>Si votre recette nécessite une cuisson au four,
                                 veuillez indiquer la température de cuisson.</h2>
@@ -175,22 +167,23 @@
                         <div class="etap" name="etape">
                             <textarea name="etape" type="text" id="texte" cols="50" rows="5"></textarea>
                             <input type="text" name="photo">
-                            <a class="#" href="etapes">Ajout etape
-                            </a>
                             <!-- <boutton>Création Etape</boutton> -->
                             <figure>
-                                <img name="image" id="img" src="../formulaireOtablier2/images/12.jpg" style=" border-color: #849460; width:250px;border-style:solid; border-width: 5px; border-radius:10px; margin:auto; text-align:left;">
+                                <img name="image" id="img" src="../formulaireOtablier2/images/12.jpg">
                                 <figcaption>Image repas du jour</figcaption>
                             </figure>
                         </div>
-                        <div class="ima">
-                            <!-- <a href="javascript:;" onMouseOver="changeimage('5.jpg')" onMouseOut="changeimage('../ImagesRecette/5.jpg')">Image</a> -->
-                            <!-- <div class="photo" > -->
-                            <!-- <img style="height:100px ;width:100px" id="image" src="../formulaireOtablier2/ImagesRecette/5.jpg" alt=""> -->
-                            <!-- </div> -->
+                        <div class="bout">
+                            <input onclick="go()" placeholder="Go !"></input>
+                            <br> Voici l"etape n°1 :
                         </div>
-                        <!-- </div> -->
                     </div>
+
+
+
+
+
+
                     <div class="mb-3" id="d1">
                         <!-- <label for="exampleFormControlTextarea1" class="form-label">Etapes *</label> -->
                         <!-- <p><textarea class="form-control" value="etp1" name="etape1" id="Txt1" placeholder="etape1" rows="3"></textarea>
@@ -231,7 +224,7 @@
                     <legend>CONSEIL</legend>
                     <div class="mb-3">
                         <!-- <h2>Conseils</h2> -->
-                        <textarea name="conseil" id="" cols="30" rows="10"></textarea>
+                        <textarea name="conseil" id="conseil" cols="115" placeholder="Conseil" rows="10"></textarea>
                     </div>
                     <hr>
                 </article>
@@ -239,13 +232,12 @@
                     <legend>MESSAGE</legend>
                     <div class="mb-3">
                         <!-- <h2>Message pour le modérateur</h2> -->
-                        <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                        <textarea name="message" id="message" cols="115" placeholder="Message" rows="10"></textarea>
                     </div>
                     <div class="col-12">
                         <button id="btn" type="submit" value="ajouter" name="submit">Déposer une recette</button>
                     </div>
                 </article>
-
         </div>
         </div>
         </form>

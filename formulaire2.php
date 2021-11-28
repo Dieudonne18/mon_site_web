@@ -1,5 +1,7 @@
+
 <?php
 // header("Location:form-merci.html");
+
 
 $servname = "localhost";
 $dbname = "bdotablier2";

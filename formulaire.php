@@ -12,7 +12,6 @@
 </head>
 
 <body>
-
     <div class="myImage">
         <img src="<?php echo "ImagesRecette/" . $_FILES['photo']['name'] ?>">
     </div>
@@ -20,7 +19,6 @@
         <img src="<?php
                     echo $photo; ?>">
     </div> -->
-
     <?php
     // print_r($_POST);
 

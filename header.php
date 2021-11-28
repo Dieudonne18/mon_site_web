@@ -28,7 +28,7 @@
             <div class="image">
                 <div class="txt"> text</div>
                 <div class="img">
-                    <img src="./images/17.jpg" alt="images">
+                    <img src="./images/5.jpg" alt="images">
                 </div>
             </div>
         </div>
