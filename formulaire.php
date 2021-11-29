@@ -63,17 +63,17 @@
         echo htmlentities($_POST['temps2']) . '<br>';
     }
     // Etape temps
-    if (isset($_POST['temps3'])) {
-        echo htmlentities($_POST['temps3']) . '<br>';
-    }
+    // if (isset($_POST['temps3'])) {
+    //     echo htmlentities($_POST['temps3']) . '<br>';
+    // }
     // Etape temps
-    if (isset($_POST['temps4'])) {
-        echo htmlentities($_POST['temps4']) . '<br>';
-    }
+    // if (isset($_POST['temps4'])) {
+    //     echo htmlentities($_POST['temps4']) . '<br>';
+    // }
     // Etape temps
-    if (isset($_POST['temps5'])) {
-        echo htmlentities($_POST['temps5']) . '<br>';
-    }
+    // if (isset($_POST['temps5'])) {
+    //     echo htmlentities($_POST['temps5']) . '<br>';
+    // }
     // Etape NBPesronne
     if (isset($_POST['NBPeronne'])) {
         echo htmlentities($_POST['NBPersonne']) . '<br>';
