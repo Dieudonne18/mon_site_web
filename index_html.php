@@ -178,12 +178,19 @@
                             <br> Voici les etape n°1 :
                             <input id="Bouton" name='etape' placeholder="Press me !">
                             <div id="tonDiv">Etape1</div>
+                            <div id="tonDiv2">Etape2</div>
                             <script>
                                 document.querySelector("#Bouton").onclick = function() {
                                     if (window.getComputedStyle(document.querySelector('#tonDiv')).display == 'none') {
                                         document.querySelector("#tonDiv").style.display = "block";
                                     } else {
                                         document.querySelector("#tonDiv").style.display = "none";
+                                    }
+                                    if (window.getComputedStyle(document.querySelector('#tonDiv')).display == 'none') {
+                                        document.querySelector("#tonDiv2").style.display = "block";
+                                    } else {
+                                        document.querySelector("#tonDiv2").style.display = "none";
+
                                     }
                                 }
                             </script>
