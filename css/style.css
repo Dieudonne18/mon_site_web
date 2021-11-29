@@ -116,3 +116,8 @@ select {
     border-radius: 5px;
     background-color: rgb(109, 39, 39);
 }  
+
+#tonDiv{
+display:none;
+background:gold;
+}

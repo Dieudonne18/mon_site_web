@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="icon" href="./images/5.jpg" width:32px,height:32px>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <script src="./form.js" async></script>
+    <script src="./formul.js" async></script>
 
 </head>
 
@@ -141,10 +141,11 @@
                         <div class="lapin">
                             <label for="number"></label>
                             <input type="number" id="num" name="NBPersonne" min="0" max="24">
-                        </div>
-                        <div class="selec">
-                            <select class="form-select" aria-label="Default select example" name="NBPersonne">
-                                <option selected>Personne</option>
+                            <!-- </div> -->
+                            <!-- <div class="selec"> -->
+                            <select class="personne" name="NBPersonne">
+                                <option>---</option>
+                                <!-- <option selected>Personne</option> -->
                                 <option value="Piece">Piece</option>
                                 <option value="Portion">Portion</option>
                                 <option value="Biscuit">Biscuit</option>
@@ -174,16 +175,21 @@
                             </figure>
                         </div>
                         <div class="bout">
-                            <input onclick="go()" placeholder="Go !"></input>
-                            <br> Voici l"etape n°1 :
+                            <br> Voici les etape n°1 :
+                            <input id="Bouton" name='etape' placeholder="Press me !">
+                            <div id="tonDiv">Etape1</div>
+                            <script>
+                                document.querySelector("#Bouton").onclick = function() {
+                                    if (window.getComputedStyle(document.querySelector('#tonDiv')).display == 'none') {
+                                        document.querySelector("#tonDiv").style.display = "block";
+                                    } else {
+                                        document.querySelector("#tonDiv").style.display = "none";
+                                    }
+                                }
+                            </script>
+                            <!-- <input onclick="go" placeholder="Go !"></input> -->
                         </div>
                     </div>
-
-
-
-
-
-
                     <div class="mb-3" id="d1">
                         <!-- <label for="exampleFormControlTextarea1" class="form-label">Etapes *</label> -->
                         <!-- <p><textarea class="form-control" value="etp1" name="etape1" id="Txt1" placeholder="etape1" rows="3"></textarea>
