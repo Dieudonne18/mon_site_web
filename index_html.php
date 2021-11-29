@@ -23,7 +23,7 @@
     <section>
         <!-- ************CONTAINER********** -->
         <div class="container">
-            <form action="formulaire.php" method="POST" class="formul" id="myform" name="formulaire" novalidate enctype="multipart/form-data">
+            <form action="formulaire2.php" method="POST" class="formul" id="myform" name="formulaire" novalidate enctype="multipart/form-data">
                 <!-- etape nom de la recette -->
                 <article>
                     <legend>TITRE DE LA RECETTE *:</legend>
@@ -86,10 +86,10 @@
                     <label for="pays"><em>Pays d'origine : </em></label>
                     <select id="Pays" name="pays">
                         <!-- <label for="title">Pays d'origine</label> -->
-                        <!-- <option selected>pays</option> -->
+                        <option selected>-----</option>
                         <option value="Europe">Europe</option>
                         <option value="Afrique">Afrique</option>
-                        <option value="canada">canada</option>
+                        <option value="canada">Amerique</option>
                         <option value="asie">asie</option>
                         <option value="oceanie">oceanie</option>
                     </select>
@@ -113,7 +113,7 @@
                         <option selected>Temps de cuisson</option>
                         <br>
                         <label for="temps"><em>Heure et Minuite :</em></label>
-                        <input type="time" id="temps" name="temps2" min="0" max="24">
+                        <input type="time" id="temps" name="temps1" min="0" max="24">
                     </div>
                 </article>
                 <hr>
@@ -123,7 +123,7 @@
                         <option selected>temps d'attente</option>
                         <br>
                         <label for="temps"><em>Heure et Minuite :</em> </label>
-                        <input type="time" id="temps" name="temps4" min="0" max="24">
+                        <input type="time" id="temps" name="temps2" min="0" max="24">
                     </div>
                 </article>
                 <hr>
@@ -155,9 +155,9 @@
                                     veuillez indiquer la température de cuisson.</em></h2>
                         </div>
                         <br>
-                        <div class="etap" name="etape">
-                            <textarea name="etape" type="text" id="texte" cols="50" rows="5"></textarea>
-                            <input type="text" name="photo">
+                        <div class="etap" name="etapePre">
+                            <textarea name="etapePre" type="text" id="texte" cols="50"></textarea>
+                            <!-- <input type="text" name="photo"> -->
                             <!-- <boutton>Création Etape</boutton> -->
                             <figure>
                                 <img name="image" id="img" src="../formulaireOtablier2/images/12.jpg">
@@ -168,82 +168,7 @@
                         <div class="bout">
                             <br><em> Les etapes de cuisson :</em>
                             <input id="Bouton" name='etape' placeholder="Press me !">
-                            <!-- <div id="tonDiv">Etape1</div>
-                            <div id="tonDiv2">Etape2</div> -->
-                            <script>
-                                let numeroEtape = 1;
-                                let btn = document.getElementById("Bouton");
-                                btn.addEventListener('click', Boite);
-
-                                function Boite() {
-
-                                    let div1 = document.createElement('input');
-                                    div1.type = "textarea";
-                                    div1.style.width = '700px';
-                                    div1.style.height = '100px';
-                                    div1.style.background = '#c0a1a1';
-                                    div1.style.border = "2px solid black";
-                                    let bout = document.querySelector(".bout");
-
-
-                                    // for (i = 1; i <= 8; i++) {
-                                    div1.placeholder = "etape" + numeroEtape;
-                                    numeroEtape++;
-
-                                    // div1.placeholder = "etape" + i;
-                                    // }
-                                    bout.appendChild(div1);
-
-                                }
-
-                                // document.querySelector("#Bouton").onclick = function() {
-                                //     if (window.getComputedStyle(document.querySelector('#tonDiv')).display == 'none') {
-                                //         document.querySelector("#tonDiv").style.display = "block";
-                                //     } else {
-                                //         document.querySelector("#tonDiv").style.display = "none";
-                                //     }
-                                //     if (window.getComputedStyle(document.querySelector('#tonDiv')).display == 'none') {
-                                //         document.querySelector("#tonDiv2").style.display = "block";
-                                //     } else {
-                                //         document.querySelector("#tonDiv2").style.display = "none";
-
-                                //     }
-                                // }
-                            </script>
                         </div>
-                    </div>
-                    <div class="mb-3" id="d1">
-                        <!-- <label for="exampleFormControlTextarea1" class="form-label">Etapes *</label> -->
-                        <!-- <p><textarea class="form-control" value="etp1" name="etape1" id="Txt1" placeholder="etape1" rows="3"></textarea>
-                    </p>
-                </div>
-                <div class="mb-3" id="d2">
-                    <p><textarea class="form-control" value="etp2" name="etape2" id="Txt2" placeholder="etape2" rows="3"></textarea>
-                    </p>
-                </div>
-                <div class="mb-3">
-                    <p><textarea class="form-control" value="etp3" name="etape3" id="Txt3" placeholder="etape3" rows="3"></textarea>
-                    </p>
-                </div>
-                <div class="mb-3">
-                    <p><textarea class="form-control" value="etp4" name="etape4" id="Txt4" placeholder="etape4" rows="3"></textarea>
-                    </p>
-                </div>
-                <div class="mb-3">
-                    <p><textarea class="form-control" value="etp5" name="etape5" id="Txt5" placeholder="etape5" rows="3"></textarea>
-                    </p>
-                </div>
-                <div class="mb-3">
-                    <p><textarea class="form-control" value="etp6" name="etape6" id="Txt6" placeholder="etape6" rows="3"></textarea>
-                    </p>
-                </div>
-                <div class="mb-3">
-                    <p><textarea class="form-control" value="etp7" name="etape7" id="Txt7" placeholder="etape7" rows="3"></textarea>
-                    </p>
-                </div>
-                <div class="mb-3">
-                    <p><textarea class="form-control" value="etp8" name="etape8" id="Txt8" placeholder="etape8" rows="3"></textarea>
-                    </p> -->
                     </div>
                 </article>
                 <hr>
@@ -271,9 +196,30 @@
         </form>
 
     </section>
-    <footer>
+    <script>
+        let numeroEtape = 1;
+        let btn = document.getElementById("Bouton");
+        btn.addEventListener('click', Boite);
 
-    </footer>
+        function Boite() {
+
+            let div1 = document.createElement('input');
+            div1.type = "textarea";
+            div1.style.width = '700px';
+            div1.style.height = '100px';
+            div1.style.background = '#c0a1a1';
+            div1.style.border = "2px solid black";
+            let bout = document.querySelector(".bout");
+            // for (i = 1; i <= 8; i++) {
+            div1.placeholder = "etape" + numeroEtape;
+            numeroEtape++;
+
+            // div1.placeholder = "etape" + i;
+            // }
+            bout.appendChild(div1);
+
+        }
+    </script>
 </body>
 
 </html>
